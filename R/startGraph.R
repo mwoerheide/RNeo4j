@@ -87,7 +87,7 @@ startGraph.default = function(url = character(), username = character(), passwor
     attr(graph, "indexes") = paste0(url, "schema/index")
     attr(graph, "constraints") = paste0(url, "schema/constraint")
     attr(graph, "node_labels") = paste0(url, "labels")
-    attr(graph, "transaction") = paste0(url, "neo4j/tx")
+    attr(graph, "transaction") = paste0(url, "{databaseName}/tx")
     attr(graph, "opts") = opts
     
     root = substr(url, 1, nchar(url) - 1)
